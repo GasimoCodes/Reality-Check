@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 2440151882102877689}
   - component: {fileID: 6866748368442343443}
   - component: {fileID: 967770643573032666}
+  - component: {fileID: 4630097372101844197}
   m_Layer: 6
   m_Name: Player Object
   m_TagString: Untagged
@@ -297,6 +298,23 @@ MonoBehaviour:
   ambienceReal: {fileID: 0}
   ambienceFake: {fileID: 0}
   ambianceVolume: 1
+--- !u!114 &4630097372101844197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356637620649116367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2c96296057daf449fafc56bd213477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumStars: 0
+  currentStars: 0
+  scoreText: {fileID: 0}
+  pickupSound: {fileID: 0}
+  stars: []
 --- !u!1 &1814916249532273951
 GameObject:
   m_ObjectHideFlags: 0

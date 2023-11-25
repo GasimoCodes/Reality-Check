@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LakeSide Thumb_0: -8389470007873812536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
