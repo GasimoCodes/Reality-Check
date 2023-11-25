@@ -18,6 +18,11 @@ public class PauseMenu : MonoBehaviour
         Application.targetFrameRate = 60;
         PauseAction.FindAction("UI/Cancel").performed += TogglePause;
         pauseScreen.SetActive(false);
+        
+    }
+
+    private void Start()
+    {
         ScreenFader.Instance.FadeIn();
     }
 

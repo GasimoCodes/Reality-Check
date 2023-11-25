@@ -40,15 +40,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Stick",
-                    "type": "Button",
-                    "id": "b532b6df-b655-46b8-b1f8-4ceacb208486",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -143,22 +134,11 @@
                 {
                     "name": "",
                     "id": "47e387bc-52a8-490b-b4b1-c9f2e998a585",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rift",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "59019658-a604-484d-aafc-3db6a1d998f6",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Stick",
+                    "action": "Rift",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

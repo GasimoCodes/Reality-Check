@@ -62,15 +62,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Stick"",
-                    ""type"": ""Button"",
-                    ""id"": ""b532b6df-b655-46b8-b1f8-4ceacb208486"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,22 +156,11 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""47e387bc-52a8-490b-b4b1-c9f2e998a585"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rift"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""59019658-a604-484d-aafc-3db6a1d998f6"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Stick"",
+                    ""action"": ""Rift"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -711,7 +691,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Rift = m_Gameplay.FindAction("Rift", throwIfNotFound: true);
-        m_Gameplay_Stick = m_Gameplay.FindAction("Stick", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -789,7 +768,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Interact;
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Rift;
-    private readonly InputAction m_Gameplay_Stick;
     public struct GameplayActions
     {
         private @BasedInput m_Wrapper;
@@ -798,7 +776,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Rift => m_Wrapper.m_Gameplay_Rift;
-        public InputAction @Stick => m_Wrapper.m_Gameplay_Stick;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -820,9 +797,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
             @Rift.started += instance.OnRift;
             @Rift.performed += instance.OnRift;
             @Rift.canceled += instance.OnRift;
-            @Stick.started += instance.OnStick;
-            @Stick.performed += instance.OnStick;
-            @Stick.canceled += instance.OnStick;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -839,9 +813,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
             @Rift.started -= instance.OnRift;
             @Rift.performed -= instance.OnRift;
             @Rift.canceled -= instance.OnRift;
-            @Stick.started -= instance.OnStick;
-            @Stick.performed -= instance.OnStick;
-            @Stick.canceled -= instance.OnStick;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -983,7 +954,6 @@ public partial class @BasedInput: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRift(InputAction.CallbackContext context);
-        void OnStick(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
