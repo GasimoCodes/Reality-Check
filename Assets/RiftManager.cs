@@ -7,6 +7,7 @@ public class RiftManager : MonoBehaviour
     private static RiftManager instance;
 
     public GameObject player;
+    public GameObject camera;
     private bool isReal = true;
 
     private void Awake()
@@ -39,6 +40,7 @@ public class RiftManager : MonoBehaviour
 	{
         isReal = !isReal;
 
-        player.transform.position = player.transform.position + new Vector3(0, 10000 * (isReal ? 1 : -1), 0);
-	}
+        player.transform.position = player.transform.position + new Vector3(0, 10000 * (isReal ? -1 : 1), 0);
+        camera.transform.position = camera.transform.position + new Vector3(0, 10000 * (isReal ? -1 : 1), 0);
+    }
 }
