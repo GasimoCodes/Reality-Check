@@ -37,6 +37,7 @@ public class ScreenFader : MonoBehaviour
 
     public void FadeIn(float duration = 1f)
     {
+        fader.color = Color.black;
         fader.DOKill();
         fader.DOFade(1f, 0).SetUpdate(true);
         fader.DOFade(0f, duration).SetUpdate(true);
@@ -44,8 +45,20 @@ public class ScreenFader : MonoBehaviour
 
     public void FadeOut(float duration = 1f)
     {
+        fader.color = Color.black;
         fader.DOKill();
         fader.DOFade(0f, 0).SetUpdate(true);
         fader.DOFade(1f, duration).SetUpdate(true);
     }
+
+    public void DoFlash(Color color, float duration = 1f)
+    {
+        fader.color = color;
+        fader.DOKill();
+        fader.DOFade(1f, 0).SetUpdate(true);
+        fader.DOFade(0f, duration).SetUpdate(true);
+    }
+
+
+
 }

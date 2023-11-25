@@ -72,7 +72,8 @@ public class Controller2D : MonoBehaviour
 
     public void OnRift(InputAction.CallbackContext context)
     {
-        
+        ScreenFader.Instance.DoFlash(new Color(1, 1, 1, 0.5f), 0.5f);
+        ScreenFX.Instance.ShakeCurrentCamera();
     }
 
 
