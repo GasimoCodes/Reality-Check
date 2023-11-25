@@ -61,19 +61,21 @@ public class ScoreManager : MonoBehaviour
 
     public void collectStar(GameObject star)
     {
-        if (stars.Count < maximumStars)
-            PlayerMessage.Instance.SetMessage(messages[UnityEngine.Random.Range(0, messages.Length)]);
-        else
-            PlayerMessage.Instance.SetMessage("Thats all of them!");
 
         stars.Remove(star);
         currentStars++;
         star.SetActive(false);
-
         pickupSound.PlayOneShot(scoreSound);
 
         scoreText.transform.parent.DOShakePosition(0.5f, 40, 100, 90, true);
         // scoreText.transform.parent.DOShakeScale(0.5f, 1, 100);
         scoreText.text = currentStars + " / " + maximumStars;
+
+        if (currentStars != maximumStars)
+            PlayerMessage.Instance.SetMessage(messages[UnityEngine.Random.Range(0, messages.Length)]);
+        else
+            PlayerMessage.Instance.SetMessage("Thats all of them!");
+
+
     }
 }

@@ -54,7 +54,7 @@ public class PlayerMessage : MonoBehaviour
         texter.DOFade(1, 0);
         
         // TODO: Kill this when we interact again, Idk how to reference this tween properly but the method is DOKILL()
-        DOTween.To(() => texter.maxVisibleCharacters, x => texter.maxVisibleCharacters = x, message.Length, 1).OnComplete(() => {
+        DOTween.To(() => texter.maxVisibleCharacters, x => texter.maxVisibleCharacters = x, message.Length, Mathf.Clamp(message.Length / 15, 1, 10)).OnComplete(() => {
             texter.DOFade(0, 5);
         });
 

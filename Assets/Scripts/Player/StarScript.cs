@@ -9,11 +9,9 @@ public class StarScript : MonoBehaviour
         ScoreManager.Instance.registerStar(this.gameObject);
     }
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if(collision.gameObject.layer == 6)
-		{
-			ScoreManager.Instance.collectStar(this.gameObject);
-		}
-	}
+    public void Collect()
+    {
+        ScoreManager.Instance.collectStar(this.gameObject);
+
+    }
 }
