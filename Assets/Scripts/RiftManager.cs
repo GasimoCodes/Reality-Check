@@ -12,8 +12,15 @@ public class RiftManager : MonoBehaviour
     public GameObject camParent;
     private bool isReal = true;
 
+    public AudioSource ambienceReal;
+    public AudioSource ambienceFake;
+
+    public float ambianceVolume = 0.3f;
+
     private void Awake()
     {
+        ambienceFake.volume = 0.0f;
+
         if (instance == null)
         {
             instance = this;
@@ -41,6 +48,10 @@ public class RiftManager : MonoBehaviour
     public void ToggleRift()
     {
         isReal = !isReal;
+        
+        ambienceReal.volume = isReal ? ambianceVolume : 0.0f;
+        ambienceFake.volume = isReal ? 0.0f : ambianceVolume;
+
         cam.GetCinemachineComponent<CinemachineFramingTransposer>().ForceCameraPosition(cam.transform.position + new Vector3(0, 100 * (isReal ? 1 : -1), 0), cam.transform.rotation);
         player.transform.position = player.transform.position + new Vector3(0, 100 * (isReal ? 1 : -1), 0);
 
