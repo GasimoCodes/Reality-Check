@@ -87,7 +87,7 @@ public class Controller2D : MonoBehaviour
             float raycastLength = playerHeight/2f;
 
             // Cast a ray from the player's position downward
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastLength, environmentMask);
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.2f, 0.2f), 0, Vector2.down, raycastLength, environmentMask);
 
             // Check if the ray hits something on the ground layer
             //if(hit.collider != null)

@@ -38,14 +38,14 @@ public class ScreenFader : MonoBehaviour
     public void FadeIn(float duration = 1f)
     {
         fader.DOKill();
-        fader.DOFade(1f, 0);
-        fader.DOFade(0f, duration);
+        fader.DOFade(1f, 0).SetUpdate(true);
+        fader.DOFade(0f, duration).SetUpdate(true);
     }
 
     public void FadeOut(float duration = 1f)
     {
         fader.DOKill();
-        fader.DOFade(0f, 0);
-        fader.DOFade(1f, duration);
+        fader.DOFade(0f, 0).SetUpdate(true);
+        fader.DOFade(1f, duration).SetUpdate(true);
     }
 }
