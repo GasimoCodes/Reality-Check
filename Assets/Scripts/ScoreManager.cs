@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using System.Collections.Generic;
 using TMPro;
+using System;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class ScoreManager : MonoBehaviour
     public AudioSource pickupSound;
     public AudioClip scoreSound;
 
+    public string[] messages;
+
     public List<GameObject> stars = new List<GameObject>();
 
     private void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
@@ -30,7 +34,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-	public static ScoreManager Instance
+    public static ScoreManager Instance
     {
         get
         {
@@ -42,27 +46,34 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-	public void Start()
-	{
+    public void Start()
+    {
         scoreText.text = currentStars + " / " + maximumStars;
     }
 
-	public void registerStar(GameObject star)
-	{
+    public void registerStar(GameObject star)
+    {
         stars.Add(star);
         maximumStars++;
 
         scoreText.text = currentStars + " / " + maximumStars;
-	}
+    }
 
     public void collectStar(GameObject star)
-	{
+    {
+        if (stars.Count < maximumStars)
+            PlayerMessage.Instance.SetMessage(messages[UnityEngine.Random.Range(0, messages.Length)]);
+        else
+            PlayerMessage.Instance.SetMessage("Thats all of them!");
+
         stars.Remove(star);
         currentStars++;
         star.SetActive(false);
 
         pickupSound.PlayOneShot(scoreSound);
 
+        scoreText.transform.parent.DOShakePosition(0.5f, 40, 100, 90, true);
+        // scoreText.transform.parent.DOShakeScale(0.5f, 1, 100);
         scoreText.text = currentStars + " / " + maximumStars;
     }
 }
