@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44b2785c2917900458617300eb8d7555
+guid: 28a95f31e5b0bff41bdbb0b0434f65b3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,8 +72,8 @@ ScriptedImporter:
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 0
-    layerImportMode: 1
+    importHiddenLayers: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -84,8 +84,8 @@ ScriptedImporter:
     addShadowCasters: 0
   asepriteImporterSettings:
     fileImportMode: 0
-    importHiddenLayers: 0
-    layerImportMode: 1
+    importHiddenLayers: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638365209729252829
+  platformSettingsDirtyTick: 638365262124020471
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Nature
+  - name: Rest_Outside
     originalName: 
-    pivot: {x: 0.55172414, y: 0}
+    pivot: {x: 0.5021097, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 116
-      height: 28
-    spriteID: d644a44d2c9519f4e89f146a544c231f
+      width: 237
+      height: 64
+    spriteID: 76cc2db008eb4e141b898768b29c3e3e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: Nature_0
+  - name: Rest_Outside_0
     originalName: 
-    pivot: {x: 0.45856866, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2
+      x: 4
       y: 4
-      width: 20
-      height: 29
-    spriteID: 87859f139080c834191b6f52c7ef60bb
+      width: 49
+      height: 63
+    spriteID: 36921f6563a8fda41b1ab70f2b9c3fcc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,78 +160,18 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Nature_1
+  - name: Rest_Outside_1
     originalName: 
-    pivot: {x: 0.48841095, y: 0}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 29
-      y: 4
-      width: 13
-      height: 21
-    spriteID: 95cf7581cc7cfa7449ea676894dd3d9e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Nature_2
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 7
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 49
-      y: 4
-      width: 19
-      height: 27
-    spriteID: 8515aaa3be4805a4d8551a648e45e9c3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Nature_3
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 7
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 70
-      y: 4
-      width: 18
-      height: 27
-    spriteID: 882e47bd040b7bd4f8eff746a6544c5d
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: Nature_4
-    originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 7
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 91
-      y: 4
-      width: 15
+      x: 60
+      y: 53
+      width: 83
       height: 13
-    spriteID: 86c6c5640f0c7494a91f9060ef31ab4b
+    spriteID: 999de9858d20cb64d8dbb33113adc5f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -240,18 +180,158 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
-  - name: Nature_5
+  - name: Rest_Outside_2
     originalName: 
-    pivot: {x: 0.5, y: 0}
-    alignment: 7
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 107
+      x: 65
+      y: 40
+      width: 62
+      height: 10
+    spriteID: fa00859a02dd28c4b81f466d27529538
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 109
+      y: 27
+      width: 30
+      height: 9
+    spriteID: 64b61ec4ed917eb4eafed84bca2fba23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 53
+      y: 6
+      width: 38
+      height: 13
+    spriteID: e6ebca58e6345854b99aa67aaac4a84d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 98
       y: 4
-      width: 15
-      height: 16
-    spriteID: bc9746a8b65df904296920d9a188d197
+      width: 35
+      height: 15
+    spriteID: 03b014c82dde0de43881366408151144
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 145
+      y: 4
+      width: 30
+      height: 66
+    spriteID: 1e1c59ec1920ef84c9d522023b8ef0e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 4
+      width: 10
+      height: 14
+    spriteID: c3809614c66f0044993e56decf25ae74
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 194
+      y: 4
+      width: 31
+      height: 57
+    spriteID: 7bac285de6070eb4d8200a9012659edf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Rest_Outside_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 225
+      y: 4
+      width: 16
+      height: 22
+    spriteID: 0261994b3d3f07d4c84c4620942ac940
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -262,20 +342,54 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
-    guid: -1883514691
-    name: Nature
-    layerFlags: 0
+    guid: 1317222744
+    name: Layer 1
+    layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: Nature
+    - name: Layer 1
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 9
         y: 0
-        width: 116
-        height: 28
-      spriteId: d644a44d2c9519f4e89f146a544c231f
+        width: 237
+        height: 64
+      spriteId: e4cadf8930cabd949b80748030f6ba34
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 1
+    guid: 1317221552
+    name: Layer 2
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 2
+      frameIndex: 0
+      cellRect:
+        x: 15
+        y: 39
+        width: 38
+        height: 20
+      spriteId: fc6167f3568b287489c682766654f3a8
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 2
+    guid: 1317221948
+    name: Layer 3
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 3
+      frameIndex: 0
+      cellRect:
+        x: 14
+        y: 40
+        width: 41
+        height: 19
+      spriteId: 392006f806dd13448b9a4168a49f6a26
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -303,4 +417,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 128, y: 32}
+  canvasSize: {x: 256, y: 64}
