@@ -292,6 +292,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1356637620649116367}
+  cam: {fileID: 0}
+  camParent: {fileID: 0}
+  ambienceReal: {fileID: 0}
+  ambienceFake: {fileID: 0}
+  ambianceVolume: 1
 --- !u!1 &1814916249532273951
 GameObject:
   m_ObjectHideFlags: 0

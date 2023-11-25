@@ -9,6 +9,7 @@ public class LevelData : ScriptableObject
 
     public string LevelName;
     public string SceneName;
+    public Sprite thumb;
 
 
 }

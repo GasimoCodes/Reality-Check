@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: Testing
   SceneName: Level0
+  thumb: {fileID: -8389470007873812536, guid: 508abd8e97527c24eba4331e383b4aa5, type: 3}
