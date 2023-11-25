@@ -39,6 +39,6 @@ public class RiftManager : MonoBehaviour
 	{
         isReal = !isReal;
 
-        player.transform.position = player.transform.position + new Vector3(0, 10000 * (isReal ? 1 : -1), 0);
+        player.transform.position = player.transform.position + new Vector3(0, 100 * (isReal ? 1 : -1), 0);
 	}
 }

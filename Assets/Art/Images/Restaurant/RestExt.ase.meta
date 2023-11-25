@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34d73e5e70053aa47b8ef84dc00d363d
+guid: 3fa8b24cb35158e4ba7c2a0039babafe
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,10 +32,10 @@ ScriptedImporter:
     sRGBTexture: 1
     spriteMode: 2
     spriteExtrude: 1
-    spriteMeshType: 0
+    spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 32
+    spritePixelsToUnits: 20
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -71,7 +71,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -83,7 +83,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 0
+    fileImportMode: 1
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638365231848342927
+  platformSettingsDirtyTick: 638365299033850333
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: TileGround
+  - name: RestExt
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.6865671, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 16
-    spriteID: 9824a899c20c34d4b965c4cb37be38ef
+      width: 67
+      height: 57
+    spriteID: 42a08ecc153c01642a4faaf7ebc955ad
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,155 +139,23 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  spriteSheetImportData:
-  - name: TileGround_0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 5}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 16
-      height: 16
-    spriteID: 067f5a385060cb347b2664ef66a4c8dd
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: TileGround_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 28
-      width: 16
-      height: 16
-    spriteID: 30c5d60e42123d44aa1b7fc1200285f7
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: TileGround_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 76
-      width: 16
-      height: 16
-    spriteID: 0deeda5613ca03048938a842c06e6017
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: TileGround_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 5}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 52
-      width: 16
-      height: 16
-    spriteID: d47b85370b1e7cf4a8d50377a95467b0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: TileGround_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 100
-      width: 16
-      height: 16
-    spriteID: b15802d46231dc4488435e43b4888234
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
+  spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 283779401
-    name: TileGround
+    guid: 60769469
+    name: RestExt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: TileGround_Frame_0
+    - name: RestExt
       frameIndex: 0
       cellRect:
-        x: 0
+        x: 18
         y: 0
-        width: 16
-        height: 16
-      spriteId: acfccb02c3e2ade4a8fa1add49e3094e
-    - name: TileGround_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 71d9d78560cf45c4d93ac447880e9d58
-    - name: TileGround_Frame_2
-      frameIndex: 2
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 99f3bbb777534e94a94f7727efe63980
-    - name: TileGround_Frame_3
-      frameIndex: 3
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 450c047f775bc69429e516a3adacfbad
-    - name: TileGround_Frame_4
-      frameIndex: 4
-      cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      spriteId: 73a2a9bb728c03b4db639f85bcf3d050
+        width: 67
+        height: 57
+      spriteId: 42a08ecc153c01642a4faaf7ebc955ad
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -315,4 +183,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 128, y: 64}

@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: REALITY PAUSED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
+  m_sharedMaterial: {fileID: -901895508665445771, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -954,37 +954,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1841254589560630136}
     m_Modifications:
     - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3513544861777901443}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TogglePause
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011769437911925053, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2903410543374043554, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
       propertyPath: m_Name
       value: Button
@@ -1068,10 +1040,6 @@ PrefabInstance:
     - target: {fileID: 5428504691967094616, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7622368344060369375, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
-      propertyPath: m_text
-      value: RESUME
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1206,6 +1174,18 @@ PrefabInstance:
     - target: {fileID: 7622368344060369375, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
       propertyPath: m_text
       value: MAIN MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622368344060369375, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
+    - target: {fileID: 7622368344060369375, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -901895508665445771, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
+    - target: {fileID: 7622368344060369375, guid: 5ce7fa4e051331547b42d40a515ffa3b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

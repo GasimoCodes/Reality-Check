@@ -233,8 +233,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ATTRIBUTIONS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
+  m_sharedMaterial: {fileID: -901895508665445771, guid: cc9d0ad867401a24aae80784471bad18, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -314,11 +314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3961493067406068757, guid: cf61b68970848bc42aa08b7dd85a7f0f, type: 3}
       propertyPath: m_Size
-      value: 0.99999577
+      value: 0.12453816
       objectReference: {fileID: 0}
     - target: {fileID: 4873623653590922614, guid: cf61b68970848bc42aa08b7dd85a7f0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00006274172
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5063788626439330274, guid: cf61b68970848bc42aa08b7dd85a7f0f, type: 3}
       propertyPath: m_Pivot.x
