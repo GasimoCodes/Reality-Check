@@ -9,8 +9,9 @@ using UnityEngine.InputSystem;
 public class Controller2D : MonoBehaviour
 {
     public Vector2 velocity;
-    public GameObject virtualCameraShift;
-
+    [Tooltip("This is the object which contains cam and sprite, we flip it based on ply facing dir")]
+    public GameObject plyObjectFlipper;
+    public Interactor2D interactor;
 
     // Inputs (Input class is just an generated wrapper for my Input file under Data/Input
     [Header(header: "Inputs")]
@@ -46,14 +47,21 @@ public class Controller2D : MonoBehaviour
         rb.velocity = new Vector2(moveAction.ReadValue<float>() * playerMaxSpeed, rb.velocity.y);
     }
 
+
     public void OnMove(InputAction.CallbackContext context)
     {
-        Debug.Log("MOVE: " + context.ReadValue<float>());
+        if (context.ReadValue<float>() < 0)
+        {
+            plyObjectFlipper.transform.localScale = new Vector3(-1, 1, 1);
+        } else
+        {
+            plyObjectFlipper.transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        Debug.Log("Interacted");
+        interactor.DoInteract(this);
     }
 
     public void OnJump(InputAction.CallbackContext context)
