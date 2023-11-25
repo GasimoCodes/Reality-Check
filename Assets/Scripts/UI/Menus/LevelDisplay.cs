@@ -29,6 +29,8 @@ public class LevelDisplay : MonoBehaviour
 
             GameObject lvl = Instantiate(LevelDisplayObject, levelsUIContainer);
             lvl.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = level.LevelName;
+            lvl.transform.GetChild(0).GetComponent<Image>().sprite = level.thumb;
+
             lvl.GetComponent<Button>().onClick.AddListener(() =>
             {
                 SceneManager.LoadScene(level.SceneName);

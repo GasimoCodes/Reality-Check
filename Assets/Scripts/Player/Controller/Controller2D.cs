@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,7 @@ public class Controller2D : MonoBehaviour
     public GameObject plyObjectFlipper;
     public Interactor2D interactor;
     public SpriteRenderer sprite;
+    public Animator animator;
 
     // Inputs (Input class is just an generated wrapper for my Input file under Data/Input
     [Header(header: "Inputs")]
@@ -46,6 +48,10 @@ public class Controller2D : MonoBehaviour
         //velocity = new Vector2(, 0);
         // We make this better later
         rb.velocity = new Vector2(moveAction.ReadValue<float>() * playerMaxSpeed, rb.velocity.y);
+
+        animator.SetFloat("SpeedX", math.abs(rb.velocity.x));
+        animator.SetFloat("SpeedY", math.abs(rb.velocity.y));
+        
     }
 
     public void OnMove(InputAction.CallbackContext context)

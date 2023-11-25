@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
     public AudioSource pickupSound;
+    public AudioClip scoreSound;
 
     public List<GameObject> stars = new List<GameObject>();
 
@@ -60,7 +61,7 @@ public class ScoreManager : MonoBehaviour
         currentStars++;
         star.SetActive(false);
 
-        pickupSound.Play();
+        pickupSound.PlayOneShot(scoreSound);
 
         scoreText.text = currentStars + " / " + maximumStars;
     }

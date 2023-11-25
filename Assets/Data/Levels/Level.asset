@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cbc3e9b2665a34ba9713ccf18c1e92, type: 3}
   m_Name: Level
   m_EditorClassIdentifier: 
-  LevelName: Testing
+  LevelName: 01 Lakeside Restaurant
   SceneName: Level0
   thumb: {fileID: -8389470007873812536, guid: 508abd8e97527c24eba4331e383b4aa5, type: 3}
