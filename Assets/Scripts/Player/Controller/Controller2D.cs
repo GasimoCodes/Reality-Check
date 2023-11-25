@@ -37,8 +37,6 @@ public class Controller2D : MonoBehaviour
         inputMap.FindAction("Interact").performed += OnInteract;
         inputMap.FindAction("Jump").performed += OnJump;
         inputMap.FindAction("Rift").performed += OnRift;
-        inputMap.FindAction("Stick").started += StartSticking;
-        inputMap.FindAction("Stick").canceled += StopSticking;
 
         rb = this.GetComponent<Rigidbody2D>();
     }
@@ -48,20 +46,6 @@ public class Controller2D : MonoBehaviour
         //velocity = new Vector2(, 0);
         // We make this better later
         rb.velocity = new Vector2(moveAction.ReadValue<float>() * playerMaxSpeed, rb.velocity.y);
-    }
-
-    public void StartSticking(InputAction.CallbackContext context)
-    {
-        Debug.Log("Sticky!");
-        rb.sharedMaterial.friction = 0.4F;
-        sprite.color = Color.green;
-    }
-
-    public void StopSticking(InputAction.CallbackContext context)
-    {
-        Debug.Log("Not Sticky!");
-        rb.sharedMaterial.friction = 0.0F;
-        sprite.color = Color.blue;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -83,7 +67,10 @@ public class Controller2D : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         if (isGrounded())
+        {
+            rb.velocityY = 0.0f;
             rb.AddForce(new Vector2(0, 300 * jumpMultiplier));
+        }
     }
 
     public void OnRift(InputAction.CallbackContext context)
@@ -105,7 +92,7 @@ public class Controller2D : MonoBehaviour
             float raycastLength = playerHeight/2f;
 
             // Cast a ray from the player's position downward
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.01f, 0.01f), 0, Vector2.down, raycastLength, environmentMask);
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.001f, 0.001f), 0, Vector2.down, raycastLength, environmentMask);
 
             // Check if the ray hits something on the ground layer
             //if(hit.collider != null)
