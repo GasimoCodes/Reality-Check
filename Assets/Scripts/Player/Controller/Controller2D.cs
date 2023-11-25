@@ -12,6 +12,7 @@ public class Controller2D : MonoBehaviour
     [Tooltip("This is the object which contains cam and sprite, we flip it based on ply facing dir")]
     public GameObject plyObjectFlipper;
     public Interactor2D interactor;
+    public SpriteRenderer sprite;
 
     // Inputs (Input class is just an generated wrapper for my Input file under Data/Input
     [Header(header: "Inputs")]
@@ -36,6 +37,8 @@ public class Controller2D : MonoBehaviour
         inputMap.FindAction("Interact").performed += OnInteract;
         inputMap.FindAction("Jump").performed += OnJump;
         inputMap.FindAction("Rift").performed += OnRift;
+        inputMap.FindAction("Stick").started += StartSticking;
+        inputMap.FindAction("Stick").canceled += StopSticking;
 
         rb = this.GetComponent<Rigidbody2D>();
     }
@@ -47,6 +50,19 @@ public class Controller2D : MonoBehaviour
         rb.velocity = new Vector2(moveAction.ReadValue<float>() * playerMaxSpeed, rb.velocity.y);
     }
 
+    public void StartSticking(InputAction.CallbackContext context)
+    {
+        Debug.Log("Sticky!");
+        rb.sharedMaterial.friction = 0.4F;
+        sprite.color = Color.green;
+    }
+
+    public void StopSticking(InputAction.CallbackContext context)
+    {
+        Debug.Log("Not Sticky!");
+        rb.sharedMaterial.friction = 0.0F;
+        sprite.color = Color.blue;
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -88,7 +104,7 @@ public class Controller2D : MonoBehaviour
             float raycastLength = playerHeight/2f;
 
             // Cast a ray from the player's position downward
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.2f, 0.2f), 0, Vector2.down, raycastLength, environmentMask);
+            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.01f, 0.01f), 0, Vector2.down, raycastLength, environmentMask);
 
             // Check if the ray hits something on the ground layer
             //if(hit.collider != null)
