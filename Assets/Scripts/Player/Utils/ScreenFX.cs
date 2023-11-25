@@ -16,7 +16,7 @@ public class ScreenFX : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+
         }
         else
         {
