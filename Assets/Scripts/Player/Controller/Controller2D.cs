@@ -45,13 +45,58 @@ public class Controller2D : MonoBehaviour
 
     private void Update()
     {
+        if (rb.velocity.x == 0)
+        {
+            velocity.x = 0;
+        }
+
+        //rb.velocity = new Vector2(math.clamp(velocity, -playerMaxSpeed, playerMaxSpeed), rb.velocity.y);
+        if (moveAction.ReadValue<float>() != 0)
+        {
+            velocity.x += moveAction.ReadValue<float>() * playerMaxSpeed * Time.deltaTime * 10f;
+            velocity.x = math.clamp(velocity.x, -playerMaxSpeed, playerMaxSpeed);
+        }
+
+        /* IN AIR */
+        if (velocity.x > 0 && isGrounded())
+        {
+            velocity.x -= Time.deltaTime * 8f;
+        }
+
+        if (velocity.x < 0 && isGrounded())
+        {
+            velocity.x += Time.deltaTime * 8f;
+        }
+
+        /* ON GROUND */
+        if (velocity.x > 0 && isGrounded())
+        {
+            velocity.x -= Time.deltaTime * 1.25f;
+        }
+
+        if (velocity.x < 0 && isGrounded())
+        {
+            velocity.x += Time.deltaTime * 1.25f;
+        }
+
+        if (velocity.x < playerMaxSpeed / 10f && velocity.x > -playerMaxSpeed / 10f)
+        {
+            velocity.x = 0;
+        }
+
+        rb.velocity = new Vector2(velocity.x, rb.velocity.y);
+
+
+        //rb.AddForce(new Vector2(force, 0));
+
         //velocity = new Vector2(, 0);
         // We make this better later
-        rb.velocity = new Vector2(moveAction.ReadValue<float>() * playerMaxSpeed, rb.velocity.y);
+
+        // rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
 
         animator.SetFloat("SpeedX", math.abs(rb.velocity.x));
         animator.SetFloat("SpeedY", math.abs(rb.velocity.y));
-        
+
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -59,7 +104,8 @@ public class Controller2D : MonoBehaviour
         if (context.ReadValue<float>() < 0)
         {
             plyObjectFlipper.transform.localScale = new Vector3(-1, 1, 1);
-        } else
+        }
+        else
         {
             plyObjectFlipper.transform.localScale = new Vector3(1, 1, 1);
         }
@@ -94,17 +140,16 @@ public class Controller2D : MonoBehaviour
     /// <returns></returns>
     public bool isGrounded()
     {
+        float raycastLength = playerHeight / 2f;
 
-            float raycastLength = playerHeight/2f;
+        // Cast a ray from the player's position downward
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.001f, 0.001f), 0, Vector2.down, raycastLength, environmentMask);
 
-            // Cast a ray from the player's position downward
-            RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(0.001f, 0.001f), 0, Vector2.down, raycastLength, environmentMask);
+        // Check if the ray hits something on the ground layer
+        //if(hit.collider != null)
+        //Debug.Log("Hit: " + hit.collider.name);
 
-            // Check if the ray hits something on the ground layer
-            //if(hit.collider != null)
-            //Debug.Log("Hit: " + hit.collider.name);
-            
-            return hit.collider != null;
+        return hit.collider != null;
     }
 
 
