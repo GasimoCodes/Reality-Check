@@ -317,6 +317,10 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   pickupSound: {fileID: 1854491143116774389}
   scoreSound: {fileID: 8300000, guid: fea1e68dc5bb8094c96ff107b1527d86, type: 3}
+  messages:
+  - A shiny!
+  - Thats going into my collection
+  - Yay!
   stars: []
 --- !u!82 &1854491143116774389
 AudioSource:

@@ -7,6 +7,7 @@ public class Inspect : MonoBehaviour, IInteractable
 {
 
     string hintName = "Look";
+    [TextArea]
     public string description = "A thing.";
     public bool disableOnInteract = false;
 
