@@ -81,10 +81,10 @@ public class Controller2D : MonoBehaviour
             velocity.x += Time.deltaTime * 8f;
         }
 
-        /*if (velocity.x < playerMaxSpeed / 100f && velocity.x > -playerMaxSpeed / 100f)
+        if (velocity.x < playerMaxSpeed / 50f && velocity.x > -playerMaxSpeed / 50f)
         {
             velocity.x = 0;
-        }*/
+        }
 
         rb.velocity = new Vector2(velocity.x, rb.velocity.y);
 
@@ -125,7 +125,6 @@ public class Controller2D : MonoBehaviour
             rb.velocityY = 0.0f;
             rb.AddForce(new Vector2(0, 300 * jumpMultiplier));
             this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
-
         }
     }
 
