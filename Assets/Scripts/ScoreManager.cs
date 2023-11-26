@@ -5,6 +5,7 @@ using Cinemachine;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -78,4 +79,20 @@ public class ScoreManager : MonoBehaviour
 
 
     }
+
+
+    public void EndGame()
+    {
+        ScreenFader.Instance.FadeOut();
+        Invoke(nameof(EndGameEnd), 2);
+
+
+    }
+
+    void EndGameEnd()
+    {
+        SceneManager.LoadSceneAsync("End");
+    }
+
+
 }

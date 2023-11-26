@@ -952,7 +952,7 @@ Camera:
   far clip plane: 20
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9
+  orthographic size: 1.0766667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2558,7 +2558,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 11400000, guid: 686bfc5837f132047bda2cee37677854, type: 2}
-  - {fileID: 11400000, guid: 0c464206dd14b9143a33cd8d50116743, type: 2}
   levelsUIContainer: {fileID: 877645123}
   LevelDisplayObject: {fileID: 6934845788584434800, guid: 78583523fd9e213448c8d7edae586b9e, type: 3}
 --- !u!1001 &6879516541013442416
