@@ -168,7 +168,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 3
-      y: 4
+      y: 43
       width: 16
       height: 32
     spriteID: ef141c7a3e5dc3346b6b32d466a45bd9
@@ -187,11 +187,31 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 25
-      y: 5
+      x: 3
+      y: 84
       width: 16
       height: 32
     spriteID: 584ff59703d27224aae219339eff9532
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: Player_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3
+      y: 5
+      width: 16
+      height: 32
+    spriteID: 9fb24922b8f44c548a93e9e86747648a
     spriteBone: []
     spriteOutline: []
     vertices: []
