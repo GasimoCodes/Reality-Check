@@ -47,44 +47,44 @@ public class Controller2D : MonoBehaviour
 
     private void Update()
     {
-        if (rb.velocity.x == 0)
+        if (rb.velocity.x == 0f)
         {
-            velocity.x = 0;
+            velocity.x = 0f;
         }
 
         //rb.velocity = new Vector2(math.clamp(velocity, -playerMaxSpeed, playerMaxSpeed), rb.velocity.y);
         if (moveAction.ReadValue<float>() != 0)
         {
-            velocity.x += moveAction.ReadValue<float>() * playerMaxSpeed * Time.deltaTime * 10f;
+            velocity.x += moveAction.ReadValue<float>() * playerMaxSpeed * Time.deltaTime * 5f;
             velocity.x = math.clamp(velocity.x, -playerMaxSpeed, playerMaxSpeed);
         }
 
         /* IN AIR */
-        if (velocity.x > 0 && isGrounded())
+        if (velocity.x > 0f && isGrounded())
+        {
+            velocity.x -= Time.deltaTime * 0.25f;
+        }
+
+        if (velocity.x < 0f && isGrounded())
+        {
+            velocity.x += Time.deltaTime * 0.25f;
+        }
+
+        /* ON GROUND */
+        if (velocity.x > 0f && isGrounded())
         {
             velocity.x -= Time.deltaTime * 8f;
         }
 
-        if (velocity.x < 0 && isGrounded())
+        if (velocity.x < 0f && isGrounded())
         {
             velocity.x += Time.deltaTime * 8f;
         }
 
-        /* ON GROUND */
-        if (velocity.x > 0 && isGrounded())
-        {
-            velocity.x -= Time.deltaTime * 1.25f;
-        }
-
-        if (velocity.x < 0 && isGrounded())
-        {
-            velocity.x += Time.deltaTime * 1.25f;
-        }
-
-        if (velocity.x < playerMaxSpeed / 10f && velocity.x > -playerMaxSpeed / 10f)
+        /*if (velocity.x < playerMaxSpeed / 100f && velocity.x > -playerMaxSpeed / 100f)
         {
             velocity.x = 0;
-        }
+        }*/
 
         rb.velocity = new Vector2(velocity.x, rb.velocity.y);
 
