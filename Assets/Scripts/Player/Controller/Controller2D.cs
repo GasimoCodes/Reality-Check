@@ -31,6 +31,8 @@ public class Controller2D : MonoBehaviour
     public float jumpMultiplier = 1;
     public float playerHeight = 0.8f;
 
+    [Header(header: "Sounds")]
+    public AudioClip jumpSound;
 
     private void Awake()
     {
@@ -122,6 +124,7 @@ public class Controller2D : MonoBehaviour
         {
             rb.velocityY = 0.0f;
             rb.AddForce(new Vector2(0, 300 * jumpMultiplier));
+            this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
         }
     }
 
