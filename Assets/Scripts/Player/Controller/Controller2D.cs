@@ -125,6 +125,7 @@ public class Controller2D : MonoBehaviour
             rb.velocityY = 0.0f;
             rb.AddForce(new Vector2(0, 300 * jumpMultiplier));
             this.GetComponent<AudioSource>().PlayOneShot(jumpSound);
+
         }
     }
 
