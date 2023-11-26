@@ -188,6 +188,7 @@ MonoBehaviour:
   playerMaxSpeed: 3
   jumpMultiplier: 1
   playerHeight: 0.8
+  jumpSound: {fileID: 8300000, guid: 2f1583f885e4d74449791297ccbb0776, type: 3}
 --- !u!50 &6517329908490635830
 Rigidbody2D:
   serializedVersion: 4
