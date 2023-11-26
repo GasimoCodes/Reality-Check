@@ -224,6 +224,14 @@ ScriptedImporter:
         width: 14
         height: 32
       spriteId: 59a72253257ab7e40ba8fca8178303ea
+    - name: Layer 1_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 1
+        y: -1
+        width: 15
+        height: 31
+      spriteId: 0429dbc0ffc040b4bbfd21919d578b7c
     linkedCells: []
     parentIndex: -1
   platformSettings:
