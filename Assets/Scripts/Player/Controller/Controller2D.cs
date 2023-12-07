@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,9 +10,9 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class Controller2D : MonoBehaviour
 {
-    public Vector2 velocity;
     [Tooltip("This is the object which contains cam and sprite, we flip it based on ply facing dir")]
     public GameObject plyObjectFlipper;
+
     public Interactor2D interactor;
     public SpriteRenderer sprite;
     public Animator animator;
@@ -20,19 +21,28 @@ public class Controller2D : MonoBehaviour
     [Header(header: "Inputs")]
     public InputActionAsset inputMap;
     // This is cached for ez fast read
-    InputAction moveAction;
+    public InputAction moveAction;
 
-    // Physics
+    [Header(header: "Physics")]
     Rigidbody2D rb;
     public LayerMask environmentMask;
 
-    // Settings
+    [Header(header: "Sounds")]
+    public AudioClip jumpSound;
+
+    [Header(header: "State Management")]
+    private PlayerState currentState;
+    private PlayerState lastState;
+
+    [Header(header: "Settings")]
     public float playerMaxSpeed = 2;
     public float jumpMultiplier = 1;
     public float playerHeight = 0.8f;
+    public bool lockMovement = false;
 
-    [Header(header: "Sounds")]
-    public AudioClip jumpSound;
+    [Header(header: "Runtimes (ReadOnly)")]
+    public Vector2 velocity;
+    public string currentStateName;
 
     private void Awake()
     {
@@ -43,59 +53,41 @@ public class Controller2D : MonoBehaviour
         inputMap.FindAction("Rift").performed += OnRift;
 
         rb = this.GetComponent<Rigidbody2D>();
+
+        // Set first state :3
+        currentState = new PlyWalkState(this, this.rb);
     }
+
+    /// <summary>
+    /// This sets a next state
+    /// </summary>
+    /// <param name="nextState"></param>
+    public void SetState(PlayerState nextState)
+    {
+        currentState.Exit();
+        lastState = currentState;
+        currentState = nextState;
+        currentState.Enter();
+        currentStateName = currentState.stateName;
+    }
+
+    /// <summary>
+    /// This returns from the current state to any previous state
+    /// </summary>
+    public void PreviousState()
+    {
+        if (lastState != null)
+            SetState(lastState);
+    }
+
 
     private void Update()
     {
-        if (rb.velocity.x == 0f)
-        {
-            velocity.x = 0f;
-        }
-
-        //rb.velocity = new Vector2(math.clamp(velocity, -playerMaxSpeed, playerMaxSpeed), rb.velocity.y);
-        if (moveAction.ReadValue<float>() != 0)
-        {
-            velocity.x += moveAction.ReadValue<float>() * playerMaxSpeed * Time.deltaTime * 5f;
-            velocity.x = math.clamp(velocity.x, -playerMaxSpeed, playerMaxSpeed);
-        }
-
-        /* IN AIR */
-        if (velocity.x > 0f && isGrounded())
-        {
-            velocity.x -= Time.deltaTime * 0.25f;
-        }
-
-        if (velocity.x < 0f && isGrounded())
-        {
-            velocity.x += Time.deltaTime * 0.25f;
-        }
-
-        /* ON GROUND */
-        if (velocity.x > 0f && isGrounded())
-        {
-            velocity.x -= Time.deltaTime * 8f;
-        }
-
-        if (velocity.x < 0f && isGrounded())
-        {
-            velocity.x += Time.deltaTime * 8f;
-        }
-
-        if (velocity.x < playerMaxSpeed / 50f && velocity.x > -playerMaxSpeed / 50f)
-        {
-            velocity.x = 0;
-        }
-
-        rb.velocity = new Vector2(velocity.x, rb.velocity.y);
+        // Do update loop
+        currentState.Update();
 
 
-        //rb.AddForce(new Vector2(force, 0));
-
-        //velocity = new Vector2(, 0);
-        // We make this better later
-
-        // rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
-
+        // Update Animator with speed values
         animator.SetFloat("SpeedX", math.abs(rb.velocity.x));
         animator.SetFloat("SpeedY", math.abs(rb.velocity.y));
 
@@ -103,6 +95,10 @@ public class Controller2D : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+
+        if (lockMovement)
+            return;
+
         if (context.ReadValue<float>() < 0)
         {
             plyObjectFlipper.transform.localScale = new Vector3(-1, 1, 1);
@@ -120,6 +116,10 @@ public class Controller2D : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (lockMovement)
+            return;
+
+
         if (isGrounded())
         {
             rb.velocityY = 0.0f;
@@ -130,6 +130,10 @@ public class Controller2D : MonoBehaviour
 
     public void OnRift(InputAction.CallbackContext context)
     {
+        if (lockMovement)
+            return;
+
+
         ScreenFader.Instance.DoFlash(new Color(1, 1, 1, 0.5f), 0.5f);
         ScreenFX.Instance.ShakeCurrentCamera();
         RiftManager.Instance.ToggleRift();
