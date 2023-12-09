@@ -4106,6 +4106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: 'It says: "100m"'
   disableOnInteract: 0
 --- !u!1 &5897702419320897836
@@ -35515,6 +35516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Bunch of spiders is still better than tons of flies I suppose.
   disableOnInteract: 0
 --- !u!61 &7510495218668308202
@@ -36565,6 +36567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Talk
   description: 'Ah, the kitchen''s closed for today, and tomorrow, and the day after
     that.
 
@@ -36597,7 +36600,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1388505096602758814, guid: 55a093aaea156e841b1e50e66d6f132c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.50345
+      value: 61.25345
       objectReference: {fileID: 0}
     - target: {fileID: 1388505096602758814, guid: 55a093aaea156e841b1e50e66d6f132c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37182,6 +37185,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Off:
     m_PersistentCalls:
       m_Calls:
@@ -37423,7 +37438,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 391540175608819, guid: 6f5e392c1f1ae994db460169df569180, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.352718
+      value: 28.366
       objectReference: {fileID: 0}
     - target: {fileID: 391540175608819, guid: 6f5e392c1f1ae994db460169df569180, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37465,6 +37480,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5211041078563444282, guid: 6f5e392c1f1ae994db460169df569180, type: 3}
+      propertyPath: m_Size.x
+      value: 0.0684932
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613885257303893924, guid: 6f5e392c1f1ae994db460169df569180, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14534974
+      objectReference: {fileID: 0}
     - target: {fileID: 8674462066946553786, guid: 6f5e392c1f1ae994db460169df569180, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -37495,6 +37518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: The door is barred shut.
   disableOnInteract: 0
 --- !u!4 &5154958492888946331 stripped
@@ -37670,6 +37694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Its stuck on the VHS screen logo.
   disableOnInteract: 0
 --- !u!1001 &6106470278330860600
@@ -37854,6 +37879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Wonderous service. Wonderous food. Wonderoud atmosphere. I give it
     10/10. You should visit it too. Like everyone does.
   disableOnInteract: 0
@@ -38319,5 +38345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Its a bunch of kitchen utensils.
   disableOnInteract: 0

@@ -238,6 +238,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 360
       objectReference: {fileID: 0}
+    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1863457746}
+    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3620825984709560078, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -257,6 +273,15 @@ PrefabInstance:
     - target: {fileID: 4605654368226736850, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699186739523956113, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: hintName
+      value: Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699186739523956113, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
+      propertyPath: description
+      value: Wonderous service. Wonderous food. Wonderous atmosphere. I give it 10/10.
+        You should visit it too. Like everyone does.
       objectReference: {fileID: 0}
     - target: {fileID: 4715001737557948976, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -537,7 +562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388505096602758814, guid: 55a093aaea156e841b1e50e66d6f132c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.558014
+      value: 66.058014
       objectReference: {fileID: 0}
     - target: {fileID: 1388505096602758814, guid: 55a093aaea156e841b1e50e66d6f132c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -800,6 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: 'A certificate, dated 2019:
 
     "This establishment won the annual
@@ -1678,6 +1704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Holy Moly, this food looks as good as in the commercials!
   disableOnInteract: 0
 --- !u!61 &825014391
@@ -2805,6 +2832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Look
   description: Its a cake. Looks very artificial.
   disableOnInteract: 0
 --- !u!61 &1297665504
@@ -2974,6 +3002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Talk
   description: Hello. We produce food. Efficiently.
   disableOnInteract: 0
 --- !u!61 &1342728059
@@ -3528,6 +3557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d7bb2b6aa16e745a2e486939df933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hintName: Talk
   description: I dont know why but theres a CD-shaped hole in my chest.
   disableOnInteract: 0
 --- !u!114 &1925126574
@@ -3773,37 +3803,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
       propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1863457746}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: EndGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
-      value: ScoreManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3432605556654407025, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
-      propertyPath: On.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5900901752842088980, guid: f3eba2c0f96a8c2468c6c890e9c715a6, type: 3}
       propertyPath: m_Name
       value: LEVEL
